@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Carlux Car Detailing</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-dark-900 text-white min-h-screen flex flex-col">
+    <custom-navbar></custom-navbar>
+    
+    <main class="flex-grow">
+        <!-- About Hero -->
+        <section class="relative py-32 flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <div class="absolute inset-0">
+                <img src="http://static.photos/automotive/1200x630/8" alt="About Carlux" class="w-full h-full object-cover">
+            </div>
+            <div class="relative z-20 text-center px-4 max-w-4xl">
+                <h1 class="text-gold-500 text-5xl md:text-6xl font-bold mb-6">ABOUT CARLUX</h1>
+                <p class="text-xl">Our passion for perfection drives every detail of our service</p>
+            </div>
+        </section>
+
+        <!-- Our Story -->
+        <section class="py-20 container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-gold-500 text-4xl font-bold mb-8">OUR STORY</h2>
+                <div class="space-y-6">
+                    <p>Founded in 2015, Carlux Car Detailing began with a simple mission: to provide unparalleled auto detailing services that exceed customer expectations.</p>
+                    <p>What started as a small mobile detailing operation has grown into a premier auto care center known for meticulous attention to detail and exceptional results.</p>
+                    <p>Our team of certified detailers brings together decades of combined experience in automotive care, using only the finest products and techniques available.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-20 bg-dark-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-gold-500 text-4xl font-bold text-center mb-16">MEET OUR TEAM</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="bg-dark-700 rounded-lg overflow-hidden text-center p-6">
+                        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gold-500">
+                            <img src="http://static.photos/people/320x240/1" alt="Team Member" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-gold-500 text-2xl font-bold mb-2">John Carlux</h3>
+                        <p class="text-gold-500 font-semibold mb-4">Founder & Master Detailer</p>
+                        <p>With 15+ years in automotive care, John's expertise sets our standard for excellence.</p>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="bg-dark-700 rounded-lg overflow-hidden text-center p-6">
+                        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gold-500">
+                            <img src="http://static.photos/people/320x240/2" alt="Team Member" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-gold-500 text-2xl font-bold mb-2">Sarah Johnson</h3>
+                        <p class="text-gold-500 font-semibold mb-4">Interior Specialist</p>
+                        <p>Sarah's meticulous approach ensures every interior detail meets our exacting standards.</p>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="bg-dark-700 rounded-lg overflow-hidden text-center p-6">
+                        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gold-500">
+                            <img src="http://static.photos/people/320x240/3" alt="Team Member" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-gold-500 text-2xl font-bold mb-2">Mike Rodriguez</h3>
+                        <p class="text-gold-500 font-semibold mb-4">Paint Correction Expert</p>
+                        <p>Mike's expertise in paint correction and ceramic coating is unmatched in the industry.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-20 container mx-auto px-4">
+            <h2 class="text-gold-500 text-4xl font-bold text-center mb-16">OUR VALUES</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="award" class="w-10 h-10 text-gold-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Excellence</h3>
+                    <p>We never compromise on quality, ensuring every vehicle receives our best possible care.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="heart" class="w-10 h-10 text-gold-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Passion</h3>
+                    <p>Our love for cars drives our attention to detail and commitment to customer satisfaction.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="shield" class="w-10 h-10 text-gold-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Integrity</h3>
+                    <p>We believe in honest assessments and transparent pricing with no hidden fees.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

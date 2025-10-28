@@ -1,0 +1,106 @@
+class CustomNavbar extends HTMLElement {
+    connectedCallback() {
+      this.attachShadow({ mode: 'open' });
+      this.shadowRoot.innerHTML = `
+        <style>
+          nav {
+            background-color: rgba(26, 26, 26, 0.9);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+          }
+          .logo {
+            color: #D4AF37;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+          }
+          ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+          }
+          a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+            position: relative;
+          }
+          a:hover {
+            color: #D4AF37;
+          }
+          a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #D4AF37;
+            transition: width 0.3s;
+          }
+          a:hover::after {
+            width: 100%;
+          }
+          .cta-button {
+            background-color: #D4AF37;
+            color: #1a1a1a;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s;
+          }
+          .cta-button:hover {
+            background-color: #e6c04d;
+            color: #1a1a1a;
+            transform: translateY(-2px);
+          }
+          .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+          }
+          @media (max-width: 768px) {
+            ul {
+              display: none;
+            }
+            .mobile-menu-button {
+              display: block;
+            }
+          }
+        </style>
+        <nav>
+          <a href="index.html" class="logo">Carlux</a>
+          <button class="mobile-menu-button">
+            <i data-feather="menu"></i>
+          </button>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="cta-button">Book Now</a></li>
+          </ul>
+        </nav>
+      `;
+      
+      // Initialize feather icons after shadow DOM is attached
+      this.shadowRoot.querySelectorAll('[data-feather]').forEach(el => {
+        feather.replace();
+      });
+    }
+  }
+  customElements.define('custom-navbar', CustomNavbar);

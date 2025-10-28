@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Carlux Car Detailing</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col">
+    <custom-navbar></custom-navbar>
+    
+    <main class="flex-grow">
+        <!-- Gallery Hero -->
+        <section class="relative py-32 flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <div class="absolute inset-0">
+                <img src="http://static.photos/automotive/1200x630/10" alt="Carlux Gallery" class="w-full h-full object-cover">
+            </div>
+            <div class="relative z-20 text-center px-4 max-w-4xl">
+                <h1 class="text-gold-500 text-5xl md:text-6xl font-bold mb-6">OUR GALLERY</h1>
+                <p class="text-xl">Witness the transformation - before and after results of our detailing work</p>
+            </div>
+        </section>
+
+        <!-- Gallery Content -->
+        <section class="py-20 container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Before/After Slider 1 -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute inset-0">
+                            <img src="http://static.photos/automotive/640x360/11" alt="Before" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-dark-900/50 flex items-center justify-center">
+                                <span class="text-white font-bold">BEFORE</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0" style="width: 50%;">
+                            <img src="http://static.photos/automotive/640x360/12" alt="After" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gold-500/50 flex items-center justify-center">
+                                <span class="text-dark-900 font-bold">AFTER</span>
+                            </div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-4/5 h-2 bg-gold-500 rounded-full appearance-none cursor-pointer z-10" oninput="this.previousElementSibling.style.width = this.value + '%'">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-gold-500 font-bold">2018 Porsche 911</h3>
+                        <p class="text-sm">Full paint correction and ceramic coating</p>
+                    </div>
+                </div>
+                
+                <!-- Before/After Slider 2 -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute inset-0">
+                            <img src="http://static.photos/automotive/640x360/13" alt="Before" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-dark-900/50 flex items-center justify-center">
+                                <span class="text-white font-bold">BEFORE</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0" style="width: 50%;">
+                            <img src="http://static.photos/automotive/640x360/14" alt="After" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gold-500/50 flex items-center justify-center">
+                                <span class="text-dark-900 font-bold">AFTER</span>
+                            </div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-4/5 h-2 bg-gold-500 rounded-full appearance-none cursor-pointer z-10" oninput="this.previousElementSibling.style.width = this.value + '%'">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-gold-500 font-bold">Leather Seat Restoration</h3>
+                        <p class="text-sm">Complete interior deep clean and leather conditioning</p>
+                    </div>
+                </div>
+                
+                <!-- Before/After Slider 3 -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute inset-0">
+                            <img src="http://static.photos/automotive/640x360/15" alt="Before" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-dark-900/50 flex items-center justify-center">
+                                <span class="text-white font-bold">BEFORE</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0" style="width: 50%;">
+                            <img src="http://static.photos/automotive/640x360/16" alt="After" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gold-500/50 flex items-center justify-center">
+                                <span class="text-dark-900 font-bold">AFTER</span>
+                            </div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-4/5 h-2 bg-gold-500 rounded-full appearance-none cursor-pointer z-10" oninput="this.previousElementSibling.style.width = this.value + '%'">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-gold-500 font-bold">Engine Bay Detailing</h3>
+                        <p class="text-sm">Complete engine bay cleaning and dressing</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Image 4 -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="http://static.photos/automotive/640x360/17" alt="Detailing Work" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-gold-500 font-bold">Wheel Detailing</h3>
+                        <p class="text-sm">Complete wheel cleaning and ceramic coating</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Image 5 -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="http://static.photos/automotive/640x360/18" alt="Detailing Work" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-gold-500 font-bold">Headlight Restoration</h3>
+                        <p class="text-sm">Oxidation removal and UV protection</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Image 6 -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="http://static.photos/automotive/640x360/19" alt="Detailing Work" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-gold-500 font-bold">Trim Restoration</h3>
+                        <p class="text-sm">Faded plastic trim brought back to life</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials -->
+            <div class="mt-20">
+                <h2 class="text-gold-500 text-4xl font-bold text-center mb-12">CLIENT TESTIMONIALS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-dark-800 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="http://static.photos/people/200x200/4" alt="Client" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Michael T.</h4>
+                                <div class="flex text-gold-500">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Carlux transformed my 10-year-old BMW to look showroom new. The attention to detail is incredible!"</p>
+                    </div>
+                    
+                    <div class="bg-dark-800 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="http://static.photos/people/200x200/5" alt="Client" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Sarah L.</h4>
+                                <div class="flex text-gold-500">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"The ceramic coating has kept my car looking perfect for over a year now. Worth every penny!"</p>
+                    </div>
+                    
+                    <div class="bg-dark-800 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="http://static.photos/people/200x200/6" alt="Client" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">David R.</h4>
+                                <div class="flex text-gold-500">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"I've tried many detailers over the years - Carlux is by far the best. My Ferrari has never looked better."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>
