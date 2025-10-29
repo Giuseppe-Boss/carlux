@@ -37,6 +37,9 @@ class CustomNavbar extends HTMLElement {
             font-weight: 500;
             position: relative;
           }
+          ul li:last-child {
+          margin-right: 35px;
+          }
           a:hover {
             color: #D4AF37;
           }
@@ -92,7 +95,7 @@ class CustomNavbar extends HTMLElement {
             <li><a href="#services">Services</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html" class="cta-button">Book Now</a></li>
+            <li><a href="contact.html" class="cta-button">Kapcsolat</a></li>
           </ul>
         </nav>
       `;
