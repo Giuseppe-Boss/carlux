@@ -147,7 +147,6 @@ class CustomNavbar extends HTMLElement {
             display: block;
             margin-right: 35px;
           }
-<<<<<<< HEAD
         }
       </style>
 
@@ -177,38 +176,6 @@ class CustomNavbar extends HTMLElement {
         button.textContent = "☰";
       }
     });
-=======
-          @media (max-width: 768px) {
-            ul {
-              display: none;
-            }
-            .mobile-menu-button {
-              display: block;
-            }
-          }
-        </style>
-        <nav>
-          <a href="index.html" class="logo">Carlux</a>
-          <button class="mobile-menu-button">
-            <i data-feather="menu"></i>
-          </button>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html" class="cta-button">Kapcsolat</a></li>
-          </ul>
-          
-        </nav>
-      `;
-      
-      // Initialize feather icons after shadow DOM is attached
-      this.shadowRoot.querySelectorAll('[data-feather]').forEach(el => {
-        feather.replace();
-      });
-    }
->>>>>>> 9b5e6a55796158abe85ce58fb07016a423a50de0
   }
 }
 
