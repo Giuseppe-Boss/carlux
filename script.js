@@ -41,3 +41,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+//kep csuszka proba
+
+document.querySelectorAll('.ba-wrapper').forEach(wrapper => {
+  const afterImg = wrapper.querySelector('.ba-img.after');
+  const handle = wrapper.querySelector('.ba-handle');
+
+  let isDragging = false;
+
+  const onMove = e => {
+    if (!isDragging) return;
+    const rect = wrapper.getBoundingClientRect();
+    const x = e.clientX ?? e.touches[0].clientX;
+    let percent = ((x - rect.left) / rect.width) * 100;
+    percent = Math.max(0, Math.min(100, percent));
+    afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+    handle.style.left = `${percent}%`;
+  };
+
+  handle.addEventListener('mousedown', () => isDragging = true);
+  window.addEventListener('mouseup', () => isDragging = false);
+  window.addEventListener('mousemove', onMove);
+
+  handle.addEventListener('touchstart', () => isDragging = true);
+  window.addEventListener('touchend', () => isDragging = false);
+  window.addEventListener('touchmove', onMove);
+});
+
+window.addEventListener('dragstart', e => e.preventDefault());
+
+
