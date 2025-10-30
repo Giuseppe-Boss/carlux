@@ -97,6 +97,7 @@ class CustomNavbar extends HTMLElement {
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="cta-button">Kapcsolat</a></li>
           </ul>
+          
         </nav>
       `;
       
