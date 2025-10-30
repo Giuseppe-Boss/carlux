@@ -61,52 +61,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /*kep csuszka proba*/
 
-.ba-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.ba-wrapper {
-  position: relative;
-  width: 400px;
-  height: 250px;
-  overflow: hidden;
-}
-
-.ba-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.ba-img.after {
-  clip-path: inset(0 50% 0 0); /* kezdetben fele látszik */
-  transition: clip-path 0.1s linear;
-}
-
-.ba-slider {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  opacity: 0.8;
-}
-
-/* dogkut kep csuszka proba*/
+/* BEFORE / AFTER SLIDER */
 
 .ba-wrapper {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   aspect-ratio: 16/9;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .ba-img {
@@ -116,10 +79,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  will-change: clip-path;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .ba-img.after {
-  clip-path: inset(0 50% 0 0);
+  clip-path: inset(0 50% 0 0); /* indulás közép */
 }
 
 .ba-handle {
@@ -132,13 +98,60 @@ h1, h2, h3, h4, h5, h6 {
   background: gold;
   cursor: ew-resize;
   z-index: 10;
+  will-change: transform;
+  user-select: none;
 }
 
 .ba-wrapper,
 .ba-wrapper img,
 .ba-handle {
-  user-select: none; /* ne lehessen kijelölni */
-  -webkit-user-drag: none; /* Safari / Chrome */
-  -moz-user-select: none;
-  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
+
+/* fancy központi gomb */
+
+.ba-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: gold;
+  cursor: ew-resize;
+  z-index: 20;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ba-handle-circle {
+  width: 48px;
+  height: 48px;
+  background: black;
+  border: 2px solid gold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: auto; /* most már fogható a kör is */
+  box-shadow: 0 0 12px rgba(0,0,0,0.35);
+}
+
+.arrow {
+  color: gold;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+  font-family: sans-serif;
+}
+
+.arrow.left { margin-right: 2px; }
+.arrow.right { margin-left: 2px; }

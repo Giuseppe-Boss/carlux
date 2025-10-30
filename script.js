@@ -51,26 +51,41 @@ document.querySelectorAll('.ba-wrapper').forEach(wrapper => {
   const handle = wrapper.querySelector('.ba-handle');
 
   let isDragging = false;
+  let pending = false;
+  let lastPercent = 50;
+
+  const updateSlider = () => {
+    pending = false;
+    afterImg.style.clipPath = `inset(0 ${100 - lastPercent}% 0 0)`;
+    handle.style.left = `${lastPercent}%`;
+  };
 
   const onMove = e => {
     if (!isDragging) return;
     const rect = wrapper.getBoundingClientRect();
-    const x = e.clientX ?? e.touches[0].clientX;
-    let percent = ((x - rect.left) / rect.width) * 100;
+    const x = (e.clientX ?? e.touches?.[0].clientX) - rect.left;
+    let percent = (x / rect.width) * 100;
     percent = Math.max(0, Math.min(100, percent));
-    afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-    handle.style.left = `${percent}%`;
+    lastPercent = percent;
+
+    if (!pending) {
+      pending = true;
+      requestAnimationFrame(updateSlider);
+    }
   };
 
-  handle.addEventListener('mousedown', () => isDragging = true);
-  window.addEventListener('mouseup', () => isDragging = false);
+  // Egér és touch események mindkettőre
+  const startDrag = e => isDragging = true;
+  const stopDrag = e => isDragging = false;
+
+  handle.addEventListener('mousedown', startDrag);
+  handle.addEventListener('touchstart', startDrag);
+  window.addEventListener('mouseup', stopDrag);
+  window.addEventListener('touchend', stopDrag);
   window.addEventListener('mousemove', onMove);
-
-  handle.addEventListener('touchstart', () => isDragging = true);
-  window.addEventListener('touchend', () => isDragging = false);
   window.addEventListener('touchmove', onMove);
-});
 
-window.addEventListener('dragstart', e => e.preventDefault());
+  window.addEventListener('dragstart', e => e.preventDefault());
+});
 
 
