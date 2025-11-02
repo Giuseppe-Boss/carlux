@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Services | Carlux Car Detailing</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col">
+    <custom-navbar></custom-navbar>
+    
+    <main class="flex-grow">
+        <!-- Corporate Hero -->
+        <section class="relative py-32 flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <div class="absolute inset-0">
+                <img src="http://static.photos/automotive/1200x630/21" alt="Corporate Fleet Detailing" class="w-full h-full object-cover">
+            </div>
+            <div class="relative z-20 text-center px-4 max-w-4xl">
+                <h1 class="text-gold-500 text-5xl md:text-6xl font-bold mb-6">CORPORATE SERVICES</h1>
+                <p class="text-xl">Premium fleet detailing solutions for businesses of all sizes</p>
+            </div>
+        </section>
+        <!-- Fleet Services -->
+        <section class="py-20 container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-gold-500 text-4xl font-bold mb-4">FLEET DETAILING SOLUTIONS</h2>
+                <p class="text-lg">Keep your company vehicles looking professional with our corporate detailing programs</p>
+            </div>
+
+            <!-- Fleet Size Calculator -->
+            <div class="bg-dark-800 rounded-lg p-8 mb-16 border border-gold-500/30">
+                <h3 class="text-2xl font-bold mb-6 text-center text-gold-500">Fleet Savings Calculator</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block mb-4">
+                            <span class="block mb-2">Number of Vehicles</span>
+                            <input type="range" min="1" max="100" value="5" class="w-full" id="fleetSize">
+                            <div class="flex justify-between mt-2">
+                                <span>1</span>
+                                <span id="fleetSizeValue">5</span>
+                                <span>100+</span>
+                            </div>
+                        </label>
+                        <label class="block mb-4">
+                            <span class="block mb-2">Service Frequency</span>
+                            <select class="w-full bg-dark-700 border border-dark-600 rounded-lg px-4 py-2">
+                                <option>Weekly</option>
+                                <option>Bi-Weekly</option>
+                                <option>Monthly</option>
+                                <option>Quarterly</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="bg-dark-700 p-6 rounded-lg">
+                        <h4 class="font-bold mb-4">Estimated Savings</h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <span>Standard Rate:</span>
+                                <span class="font-bold" id="standardRate">$1,250</span>
+                            </div>
+                            <div class="flex justify-between text-gold-500">
+                                <span>Corporate Discount:</span>
+                                <span class="font-bold" id="discount">-$250</span>
+                            </div>
+                            <div class="border-t border-dark-600 pt-4 mt-4 flex justify-between text-xl">
+                                <span>Your Price:</span>
+                                <span class="font-bold" id="finalPrice">$1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Fleet Basic -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60 transition">
+                    <div class="bg-gold-500/20 p-6 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Fleet Basic</h3>
+                        <div class="text-gold-500 text-3xl font-bold">$100-$200</div>
+                        <p class="text-sm">per vehicle</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Exterior Hand Wash</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Wheel & Tire Cleaning</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Interior Vacuum</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Window Cleaning</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Dashboard Wipe Down</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block bg-gold-500 hover:bg-gold-600 text-dark-900 font-bold py-2 px-4 rounded transition text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <!-- Fleet Premium -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden border border-gold-500 hover:border-gold-400 transition transform scale-105 z-10">
+                    <div class="bg-gold-500 p-6 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Fleet Premium</h3>
+                        <div class="text-dark-900 text-3xl font-bold">$250-$400</div>
+                        <p class="text-sm">per vehicle</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Everything in Fleet Basic</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Clay Bar Treatment</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Hand Wax Application</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Complete Interior Detailing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Odor Neutralization</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block bg-gold-500 hover:bg-gold-600 text-dark-900 font-bold py-2 px-4 rounded transition text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <!-- Fleet Custom -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60 transition">
+                    <div class="bg-gold-500/20 p-6 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Custom Program</h3>
+                        <div class="text-gold-500 text-3xl font-bold">Custom Pricing</div>
+                        <p class="text-sm">tailored to your needs</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Customized Service Packages</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Regular Maintenance Schedules</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>On-Site Fleet Detailing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Priority Scheduling</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="w-4 h-4 text-gold-500 mr-2"></i>
+                                <span>Dedicated Account Manager</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block bg-gold-500 hover:bg-gold-600 text-dark-900 font-bold py-2 px-4 rounded transition text-center">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Benefits Section -->
+        <section class="py-20 bg-dark-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-gold-500 text-4xl font-bold text-center mb-16">BENEFITS FOR YOUR BUSINESS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-dark-700 p-6 rounded-lg border border-gold-500/30 hover:border-gold-500/60 transition">
+                        <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-feather="percent" class="w-10 h-10 text-gold-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-center">Volume Discounts</h3>
+                        <p class="text-center">Save 10-30% with our tiered corporate pricing based on fleet size</p>
+                    </div>
+<div class="text-center">
+                        <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-feather="dollar-sign" class="w-10 h-10 text-gold-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Volume Discounts</h3>
+                        <p>Special pricing for fleets of 5+ vehicles with our corporate program</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-feather="clock" class="w-10 h-10 text-gold-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Flexible Scheduling</h3>
+                        <p>After-hours and weekend appointments available to minimize downtime</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-feather="truck" class="w-10 h-10 text-gold-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Mobile Service</h3>
+                        <p>We come to your location with our fully equipped mobile detailing units</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-feather="file-text" class="w-10 h-10 text-gold-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Detailed Reporting</h3>
+                        <p>Condition reports and before/after photos for your records</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Industries Served -->
+        <section class="py-20 container mx-auto px-4">
+            <h2 class="text-gold-500 text-4xl font-bold text-center mb-16">TRUSTED BY INDUSTRY LEADERS</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+<div class="bg-dark-800 p-6 rounded-lg border border-gold-500/30 text-center">
+                    <div class="bg-gold-500/20 p-4 rounded-full inline-block mb-4">
+                        <i data-feather="truck" class="w-8 h-8 text-gold-500"></i>
+                    </div>
+                    <h3 class="font-bold">Delivery Fleets</h3>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-lg border border-gold-500/30 text-center">
+                    <div class="bg-gold-500/20 p-4 rounded-full inline-block mb-4">
+                        <i data-feather="car" class="w-8 h-8 text-gold-500"></i>
+                    </div>
+                    <h3 class="font-bold">Rental Companies</h3>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-lg border border-gold-500/30 text-center">
+                    <div class="bg-gold-500/20 p-4 rounded-full inline-block mb-4">
+                        <i data-feather="briefcase" class="w-8 h-8 text-gold-500"></i>
+                    </div>
+                    <h3 class="font-bold">Corporate Fleets</h3>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-lg border border-gold-500/30 text-center">
+                    <div class="bg-gold-500/20 p-4 rounded-full inline-block mb-4">
+                        <i data-feather="home" class="w-8 h-8 text-gold-500"></i>
+                    </div>
+                    <h3 class="font-bold">Real Estate</h3>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-lg border border-gold-500/30 text-center">
+                    <div class="bg-gold-500/20 p-4 rounded-full inline-block mb-4">
+                        <i data-feather="shopping-bag" class="w-8 h-8 text-gold-500"></i>
+                    </div>
+                    <h3 class="font-bold">Retail</h3>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-lg border border-gold-500/30 text-center">
+                    <div class="bg-gold-500/20 p-4 rounded-full inline-block mb-4">
+                        <i data-feather="heart" class="w-8 h-8 text-gold-500"></i>
+                    </div>
+                    <h3 class="font-bold">Medical Services</h3>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-lg border border-gold-500/30 text-center">
+                    <div class="bg-gold-500/20 p-4 rounded-full inline-block mb-4">
+                        <i data-feather="users" class="w-8 h-8 text-gold-500"></i>
+                    </div>
+                    <h3 class="font-bold">Ride Sharing</h3>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-lg border border-gold-500/30 text-center">
+                    <div class="bg-gold-500/20 p-4 rounded-full inline-block mb-4">
+                        <i data-feather="award" class="w-8 h-8 text-gold-500"></i>
+                    </div>
+                    <h3 class="font-bold">Luxury Dealers</h3>
+                </div>
+            </div>
+        </section>
+        <!-- Case Studies -->
+        <section class="py-20 bg-dark-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-gold-500 text-4xl font-bold text-center mb-16">CASE STUDIES</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-dark-700 p-8 rounded-lg border border-gold-500/30">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                <img src="http://static.photos/business/200x200/1" alt="Client" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="font-bold">Premier Delivery Services</h3>
+                                <p class="text-sm text-gray-400">50-vehicle fleet</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-gold-500 font-bold">Results:</span>
+                            <span class="text-sm">6-month program</span>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-5 h-5 text-gold-500 mr-2 mt-1"></i>
+                                <span>32% reduction in vehicle replacement costs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-5 h-5 text-gold-500 mr-2 mt-1"></i>
+                                <span>28% increase in driver satisfaction</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-5 h-5 text-gold-500 mr-2 mt-1"></i>
+                                <span>22% improvement in customer perception</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-dark-700 p-8 rounded-lg border border-gold-500/30">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                <img src="http://static.photos/business/200x200/2" alt="Client" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="font-bold">Luxury Auto Rentals</h3>
+                                <p class="text-sm text-gray-400">25-vehicle fleet</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-gold-500 font-bold">Results:</span>
+                            <span class="text-sm">12-month program</span>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-5 h-5 text-gold-500 mr-2 mt-1"></i>
+                                <span>45% increase in rental renewals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-5 h-5 text-gold-500 mr-2 mt-1"></i>
+                                <span>38% reduction in damage claims</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-5 h-5 text-gold-500 mr-2 mt-1"></i>
+                                <span>4.9/5 average customer satisfaction</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-4 text-center">
+                <div class="max-w-4xl mx-auto bg-dark-800 p-12 rounded-xl border border-gold-500/30">
+                    <h2 class="text-gold-500 text-4xl font-bold mb-6">Ready to Elevate Your Fleet?</h2>
+                    <p class="text-xl mb-8">Contact us today to discuss customized corporate detailing solutions for your business.</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-4">
+                        <a href="contact.html" class="bg-gold-500 hover:bg-gold-600 text-dark-900 font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Get Corporate Pricing</a>
+                        <a href="#" class="border border-gold-500 text-gold-500 hover:bg-gold-500/10 font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Download Brochure</a>
+                    </div>
+                </div>
+            </div>
+</section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

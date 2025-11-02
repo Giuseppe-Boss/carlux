@@ -154,10 +154,11 @@ class CustomNavbar extends HTMLElement {
         <a href="index.html" class="logo">Carlux</a>
         <button class="mobile-menu-button">☰</button>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Kezdőlap</a></li>
+          <li><a href="about.html">Rólunk</a></li>
+          <li><a href="index.html#services">Szolgáltatások</a></li>
+          <li><a href="gallery.html">Galéria</a></li>
+          <li><a href="corporate.html">Cégeknek</a></li>
           <li><a href="contact.html" class="cta-button">Kapcsolat</a></li>
         </ul>
       </nav>

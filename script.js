@@ -1,3 +1,32 @@
+// Corporate page fleet calculator
+const fleetSizeInput = document.getElementById('fleetSize');
+const fleetSizeValue = document.getElementById('fleetSizeValue');
+const standardRate = document.getElementById('standardRate');
+const discount = document.getElementById('discount');
+const finalPrice = document.getElementById('finalPrice');
+
+if (fleetSizeInput) {
+    fleetSizeInput.addEventListener('input', function() {
+        const size = parseInt(this.value);
+        fleetSizeValue.textContent = size;
+        
+        // Calculate pricing
+        const basePrice = size * 250;
+        let discountAmount = 0;
+        
+        if (size >= 10 && size < 25) {
+            discountAmount = basePrice * 0.1;
+        } else if (size >= 25 && size < 50) {
+            discountAmount = basePrice * 0.2;
+        } else if (size >= 50) {
+            discountAmount = basePrice * 0.3;
+        }
+        
+        standardRate.textContent = `${basePrice.toLocaleString()}`;
+        discount.textContent = `-${discountAmount.toLocaleString()}`;
+        finalPrice.textContent = `${(basePrice - discountAmount).toLocaleString()}`;
+    });
+}
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
