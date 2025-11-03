@@ -61,22 +61,30 @@ class CustomFooter extends HTMLElement {
             padding-top: 1.5rem;
             border-top: 1px solid #333;
           }
+            .footer-about{
+              justify-content: center;
+              align-items: center;
+              display: flex;
+            }
+          #footerLogo{
+            width: 90%;
+          }
           @media (max-width: 768px) {
             .footer-content {
               grid-template-columns: 1fr;
+            }
+            #footerLogo{
+              width: 60%;
+            }
+            .footer-links  {
+                text-align:center;
             }
           }
         </style>
         <footer>
           <div class="footer-content">
             <div class="footer-about">
-              <div class="footer-logo">Carlux</div>
-              <p>Premium car detailing services that restore your vehicle's showroom shine.</p>
-              <div class="social-links">
-                <a href="#"><i data-feather="facebook"></i></a>
-                <a href="#"><i data-feather="instagram"></i></a>
-                <a href="#"><i data-feather="twitter"></i></a>
-              </div>
+              <img src="carlux_logo_uj_vagott.png" id="footerLogo" alt="">
             </div>
             <div class="footer-links">
               <h3>Services</h3>
