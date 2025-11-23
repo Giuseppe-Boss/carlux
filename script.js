@@ -11,7 +11,7 @@ if (fleetSizeInput) {
         fleetSizeValue.textContent = size;
         
         // Calculate pricing
-        const basePrice = size * 250;
+        const basePrice = size * 11990;
         let discountAmount = 0;
         
         if (size >= 10 && size < 25) {
