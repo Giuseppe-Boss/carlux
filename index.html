@@ -1,333 +1,563 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carlux Autókozmetika | Premium Auto Care</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: {
-                            500: '#D4AF37',
-                        },
-                        dark: {
-                            900: '#1a1a1a'
-                        }
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                500: "#D4AF37",
+              },
+              dark: {
+                900: "#1a1a1a",
+              },
+            },
+          },
+        },
+      };
     </script>
-</head>
-<body class="bg-black text-white min-h-screen flex flex-col">
+  </head>
+  <body class="bg-black text-white min-h-screen flex flex-col">
     <custom-navbar></custom-navbar>
-    
+
     <main class="flex-grow">
-        <!-- Hero Section -->
-        <section class="relative h-screen flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 bg-black/50 z-10"></div>
-            <div class="absolute inset-0">
-                <img src="http://static.photos/automotive/1200x630/93" alt="Luxury Car" class="w-full h-full object-cover">
+      <!-- Hero Section -->
+      <section
+        class="relative h-screen flex items-center justify-center overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        <div class="absolute inset-0">
+          <img
+            src="http://static.photos/automotive/1200x630/93"
+            alt="Luxury Car"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="relative z-20 text-center px-4 max-w-4xl">
+          <h1 class="text-gold-500 text-5xl md:text-7xl font-bold mb-6">
+            CARLUX AUTÓKOZMETIKA
+          </h1>
+          <p class="text-xl mb-8">
+            Prémium szolgáltatások, prémium ügyfélkezelés
+          </p>
+          <a
+            href="#services"
+            class="bg-gold-500 hover:bg-gold-600 text-dark-900 font-bold py-3 px-8 rounded-full transition duration-300 inline-block"
+            >Felfedezés</a
+          >
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="py-20 container mx-auto px-4">
+        <h2 class="text-gold-500 text-4xl font-bold text-center mb-16">
+          MITŐL VAGYUNK MÁSOK
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div
+              class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i data-feather="award" class="w-10 h-10 text-gold-500"></i>
             </div>
-            <div class="relative z-20 text-center px-4 max-w-4xl">
-                <h1 class="text-gold-500 text-5xl md:text-7xl font-bold mb-6">CARLUX AUTÓKOZMETIKA</h1>
-                <p class="text-xl mb-8">Prémium szolgáltatások, prémium ügyfélkezelés</p>
-                <a href="#services" class="bg-gold-500 hover:bg-gold-600 text-dark-900 font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Felfedezés</a>
+            <h3 class="text-xl font-bold mb-3">Minőség</h3>
+            <p>
+              Munkánk során a lehető legjobb minőségben dolgozunk. Részletekbe
+              menően, figyelemmel az apró részletekre "detailing" szinten
+              dolgozunk, a tökéletes végeredmény és a legjobb ügyfélelégedettség
+              érdekében.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i data-feather="heart" class="w-10 h-10 text-gold-500"></i>
             </div>
-        </section>
-
-                <!-- Values Section -->
-        <section class="py-20 container mx-auto px-4">
-            <h2 class="text-gold-500 text-4xl font-bold text-center mb-16">MITŐL VAGYUNK MÁSOK</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="award" class="w-10 h-10 text-gold-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Minőség</h3>
-                    <p>Munkánk során a lehető legjobb minőségben dolgozunk. Részletekbe menően, figyelemmel az apró részletekre "detailing" szinten dolgozunk, a tökéletes végeredmény és a legjobb ügyfélelégedettség érdekében.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="heart" class="w-10 h-10 text-gold-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Ügyfélközpontúság</h3>
-                    <p>Szolgáltatásainkat és munkáink beosztását igyekszünk ügyfeleink igényeihez igazítani. Ez olykor éjszakákba menő túlórákat okoz, azonban mivel számunkra nagyon fontos ügyfeleink elégedettsége, ezt is bevállaljuk értük.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="navigation" class="w-10 h-10 text-gold-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Hozom-viszem</h3>
-                    <p>Minden B kategóriás jogosítvánnyal vezethető járműre elérhető a hozom-viszem szolgáltatásunk, hogy a kozmetikázást még kényelmesebbé tegyük ügyfeleink számára.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="users" class="w-10 h-10 text-gold-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Partnerség</h3>
-                    <p>Cégek, kereskedések, szalonok számára továbbra is elérhető "Alap csomag" szolgáltatásunk, melyet a hozott autók számának függvényében kezdezőbb áron is tudunk biztosítani, egyéb további kedvezmények mellett.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="hexagon" class="w-10 h-10 text-gold-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Sokrétűség</h3>
-                    <p>Kozmetikánkban nem csak autókkal foglalkozunk. Igény esetén más járműveket is kezelésbe veszünk, legyen az munkásautó, mezőgazdasági gép, hajó, vagy akár légi jármű.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="gift" class="w-10 h-10 text-gold-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Kedvezmények</h3>
-                    <p>Minden járműben elhelyezünk egy véletlenszerű kedvezményt tartalmazó kártyát.</p>
-                </div>
+            <h3 class="text-xl font-bold mb-3">Ügyfélközpontúság</h3>
+            <p>
+              Szolgáltatásainkat és munkáink beosztását igyekszünk ügyfeleink
+              igényeihez igazítani. Ez olykor éjszakákba menő túlórákat okoz,
+              azonban mivel számunkra nagyon fontos ügyfeleink elégedettsége,
+              ezt is bevállaljuk értük.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i data-feather="navigation" class="w-10 h-10 text-gold-500"></i>
             </div>
-        </section>
-
-
-        <!-- Services Section -->
-        <section id="services" class="py-20 container mx-auto px-4">
-            <h2 class="text-gold-500 text-4xl font-bold text-center mb-16">SZOLGÁLTATÁSAINK</h2>
-            <h2 class="text-xl mb-8 text-center">Szolgáltatásainkat a minőség és tartósság irányába fejlesztjük, így ennek elősegítése érdekében az eddigi legkisebb csomagunkat, az <strong>Alap csomagot</strong> magánszemélyek számára megszüntettük, mivel nem volt arányos az elvárásunk szerinti minőséggel. Célunk, hogy minden autó a lehető legjobb formában kerüljön ki kezeink közül.</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-
-                <!-- Service 1 -->
-                <div class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60">
-                    <div class="h-48 bg-gold-500/20 flex items-center justify-center">
-                        <i data-feather="star" class="w-16 h-16 text-gold-500"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-gold-500 text-2xl font-bold mb-3">Prémium csomag</h3>
-                        <p class="mb-4">A csomag tartalmazza a teljes "Pro csomagot". Ezen felűl tartalmaz még egy mély külső felület tisztitást, egy fényesitő polírozást, mely a karcok nagyjából 60%-át eltünteti és szebb fényt varázsol autójának, majd végűl egy ózonos fertőtlenítést.</p>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-gold-500 font-bold text-xl">59.990Ft</span>
-                            <span class="text-sm text-gray-400">(Az ár állapot függvényében változhat.)</span>
-                        </div>
-                        <div class="service-details hidden">
-                            <ul class="list-disc pl-5 space-y-2 text-sm">
-                                <li>Teljes "Pro csomag" tartalma</li>
-                                <li>Vízkőoldás</li>
-                                <li>Gőzös tisztítás, sterilizálás</li>
-                                <li>Kárpittisztítás</li>
-                                <li>Motortér tisztítás</li>
-                                <li>Ózongenerátoros klímafertőtlenítés</li>
-                                <li>Kemény waxolás(6-8 hónap)</li>
-                            </ul>
-                            <p class="mt-4 text-sm text-gray-300">Időtartama: 1-2 nap állapottól fűggően változhat</p>
-                        </div>
-                        <button class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2">
-                            <span>More Details</span>
-                            <i data-feather="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
-                        </button>
-                    </div>
-                </div>
-                <!-- Service 2 -->
-                <div class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60">
-                    <div class="h-48 bg-gold-500/20 flex items-center justify-center">
-                        <div class="service-ribbon top-right">Népszerű</div>
-                        <i data-feather="pocket" class="w-16 h-16 text-gold-500"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-gold-500 text-2xl font-bold mb-3">Pro csomag</h3>
-                        <p class="mb-4">A csomag tartalmazza a teljes "Alap csomagot". Ezen felül magában foglalja a vízkőoldást, a gőzös tisztítást és sterilizálást, a kárpittisztítást, a motortér alapos tisztítását, valamint egy 6 hónapos tartósságú kemény waxolást.</p>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-gold-500 font-bold text-xl">29.990Ft</span>
-                            <span class="text-sm text-gray-400">(Az ár állapot függvényében változhat.)</span>
-                        </div>
-                        <div class="service-details hidden">
-                            <ul class="list-disc pl-5 space-y-2 text-sm">
-                                <li>Teljes "Alap csomag" tartalma</li>
-                                <li>Érintéses mosás</li>
-                                <li>Szállórozsda eltávolítás</li>
-                                <li>Részleges kárpittisztítás</li>
-                                <li>Bőrtisztítás, bőrápolás</li>
-                                <li>Műanyagápolás</li>
-                                <li>Wax bevonat(3 hónap)</li>
-                                <li>Véletlenszerű kedvezmény/nyeremény</li>
-                            </ul>
-                            <p class="mt-4 text-sm text-gray-300">Időtartam: 3-6 óra (állapottól függően változhat)</p>
-                        </div>
-                        <button class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2">
-                            <span>More Details</span>
-                            <i data-feather="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
-                        </button>
-                    </div>
-                </div>
-                <!-- Service 3 -->
-                <div class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60">
-                    <div class="h-48 bg-gold-500/20 flex items-center justify-center">
-                        <i data-feather="droplet" class="w-16 h-16 text-gold-500"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-gold-500 text-2xl font-bold mb-3">Alap csomag</h3>
-                        <p class="mb-4">A csomag tartalmaz egy teljes külső-belső tisztítást.Ezen felül magában foglalja a bőrfelületek tisztítását és ápolását, a szállórozsda eltávolítását, valamint egy 3 hónapos tartósságú waxolást. </p>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-gold-500 font-bold text-xl">11.990Ft</span>
-                            <span class="text-sm text-gray-400">(Az ár állapot függvényében változhat.)</span>
-                        </div>
-                        <div class="service-details hidden">
-                            <ul class="list-disc pl-5 space-y-2 text-sm">
-                                <li>Előmosás, samponos mosás</li>
-                                <li>Rovaroldás</li>
-                                <li>Felnitisztítás</li>
-                                <li>Gumiápolás</li>
-                                <li>Wax</li>
-                                <li>Ajtóflcok tisztítása</li>
-                                <li>Porszívózás(utastér, csomagtér)</li>
-                                <li>Műanyag elemek tisztítása</li>
-                                <li>Szellőzők tisztítása</li>
-                                <li>Ablakok tisztítása</li>
-                                <li>Illtosítás</li>
-                            </ul>
-                            <p class="mt-4 text-sm text-gray-300">Időtartam: 1-3 óra (állapottól függően változhat)</p>
-                        </div>
-                        <button class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2">
-                            <span>More Details</span>
-                            <i data-feather="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60">
-                    <div class="h-48 bg-gold-500/20 flex items-center justify-center">
-                        <i data-feather="aperture" class="w-16 h-16 text-gold-500"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-gold-500 text-2xl font-bold mb-3">Korrekciós polírozás</h3>
-                        <p class="mb-4">A korrekciós polírozás során a fényezés felületéről eltávolítják a kisebb karcokat, oxidációt és vízkövet, visszaadva az autó eredeti fényét és simaságát.</p>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-gold-500 font-bold text-xl">Kérjen ajánlatot!</span>
-                            <span class="text-sm text-gray-400"><small>(Méret és állapot függvényében változhat.)</small></span>
-                        </div>
-                        <div class="service-details hidden">
-                            <ul class="list-disc pl-5 space-y-2 text-sm">
-                                <li>Visszaadja a fényezés eredeti fényét és mélységét.</li>
-                                <li>Eltávolítja a kisebb karcokat, oxidációt és vízkövet.</li>
-                                <li>Megakadályozza a felület további károsodását.</li>
-                                <li>Javítja a viasz vagy más védőréteg tapadását.</li>
-                                <li>Növeli az autó értékét és esztétikai vonzerejét.</li>
-                                <li>Az autó ápolt, újszerű megjelenést kap.</li>
-                            </ul>
-                            <p class="mt-4 text-sm text-gray-300">Időtartam: 2-3 nap (állapottól függően változhat)</p>
-                        </div>
-                        <button class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2">
-                            <span>Előnyök</span>
-                            <i data-feather="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60">
-                    <div class="h-48 bg-gold-500/20 flex items-center justify-center">
-                        <i data-feather="battery-charging" class="w-16 h-16 text-gold-500"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-gold-500 text-2xl font-bold mb-3">Fényszóró polírozás</h3>
-                        <p class="mb-4">A fényszóró polírozás során átdolgozzuk a homályos vagy matt felületet, visszaadva a kristálytiszta átláthatóságot.</p>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-gold-500 font-bold text-xl">8.000Ft-tól</span>
-                            <span class="text-sm text-gray-400"><small>(Méret és állapot függvényében változhat.)</small></span>
-                        </div>
-                        <div class="service-details hidden">
-                            <ul class="list-disc pl-5 space-y-2 text-sm">
-                                <li>Javítja a fényszóró fényerejét és világítását.</li>
-                                <li>Növeli az éjszakai és rossz látási viszonyok melletti biztonságot.</li>
-                                <li>Megakadályozza a további oxidációt és sárgulást.</li>
-                                <li>Hosszabbítja a fényszórók élettartamát</li>
-                                <li>Esztétikailag új, tiszta megjelenést biztosít az autónak.</li>
-                                <li>Csökkenti a fény szétszóródását, így egyenletesebb megvilágítást biztosít.</li>
-                            </ul>
-                            <p class="mt-4 text-sm text-gray-300">Időtartam: 2-3 óra (állapottól függően változhat)</p>
-                        </div>
-                        <button class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2">
-                            <span>Előnyök</span>
-                            <i data-feather="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60">
-                    <div class="h-48 bg-gold-500/20 flex items-center justify-center">
-                        <i data-feather="shield" class="w-16 h-16 text-gold-500"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-gold-500 text-2xl font-bold mb-3">Kerámia bevonat</h3>
-                        <p class="mb-4">A kerámia bevonat során egy tartós, védő réteget viszünk fel a fényezésre, amely ellenáll a szennyeződéseknek, víznek és kisebb karcoknak. A kerámia bevonat előtt ajánlott korrekciós polirózást elvégezni.</p>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-gold-500 font-bold text-xl">Kérjen ajánlatot!</span>
-                            <span class="text-sm text-gray-400"><small>(Méret és állapot függvényében változhat.)</small></span>
-                        </div>
-                        <div class="service-details hidden">
-                            <ul class="list-disc pl-5 space-y-2 text-sm">
-                                <li>Hosszú távon védi a fényezést a környezeti hatásoktól.</li>
-                                <li>Könnyebbé teszi az autó tisztítását, a szennyeződések kevésbé tapadnak.</li>
-                                <li>Fokozza a fényerőt és a mély, intenzív csillogást.</li>
-                                <li>Csökkenti a karcok és oxidáció kialakulásának esélyét.</li>
-                                <li>Hosszabbítja a viaszolás és más felületi védelmi kezelések hatékonyságát.</li>
-                                <li>Megvédi a fényezést a savas eső, madárürülék és egyéb káros anyagok okozta korróziótól.</li>
-                            </ul>
-                            <p class="mt-4 text-sm text-gray-300">Időtartam: 2-3 nap (állapottól függően változhat)</p>
-                        </div>
-                        <button class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2">
-                            <span>Előnyök</span>
-                            <i data-feather="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
-                        </button>
-                    </div>
-                </div>
-                
-</div>
-
-                <br>
-                <h2 class="text-xl mb-8 text-center">Szolgáltatásaink bármelyike kérhető <strong>hozom-viszem</strong> szolgáltatással.</h2>
-
-        </section>
-<!-- Gallery Section -->
-        <section class="py-20 bg-dark-800">
-            <div class="container mx-auto px-4">
-                <h2 class="text-gold-500 text-4xl font-bold text-center mb-16">Munkáink</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="overflow-hidden rounded-lg">
-                        <img src="http://static.photos/automotive/640x360/2" alt="Detailing Work" class="w-full h-64 object-cover hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="overflow-hidden rounded-lg">
-                        <img src="http://static.photos/automotive/640x360/3" alt="Detailing Work" class="w-full h-64 object-cover hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="overflow-hidden rounded-lg">
-                        <img src="http://static.photos/automotive/640x360/4" alt="Detailing Work" class="w-full h-64 object-cover hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="overflow-hidden rounded-lg">
-                        <img src="http://static.photos/automotive/640x360/5" alt="Detailing Work" class="w-full h-64 object-cover hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="overflow-hidden rounded-lg">
-                        <img src="http://static.photos/automotive/640x360/6" alt="Detailing Work" class="w-full h-64 object-cover hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="overflow-hidden rounded-lg">
-                        <img src="http://static.photos/automotive/640x360/7" alt="Detailing Work" class="w-full h-64 object-cover hover:scale-110 transition duration-500">
-                    </div>
-                </div>
+            <h3 class="text-xl font-bold mb-3">Hozom-viszem</h3>
+            <p>
+              Minden B kategóriás jogosítvánnyal vezethető járműre elérhető a
+              hozom-viszem szolgáltatásunk, hogy a kozmetikázást még
+              kényelmesebbé tegyük ügyfeleink számára.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i data-feather="users" class="w-10 h-10 text-gold-500"></i>
             </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="py-20">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-gold-500 text-4xl font-bold mb-6">Engedd, hogy az autód igazán ragyogjon!</h2>
-                <p class="text-xl mb-8 max-w-2xl mx-auto">Foglalj időpontot még ma!</p>
-                <a href="contact.html" class="bg-gold-500 hover:bg-gold-600 text-dark-900 font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Kapcsolat</a>
+            <h3 class="text-xl font-bold mb-3">Partnerség</h3>
+            <p>
+              Cégek, kereskedések, szalonok számára továbbra is elérhető "Alap
+              csomag" szolgáltatásunk, melyet a hozott autók számának
+              függvényében kezdezőbb áron is tudunk biztosítani, egyéb további
+              kedvezmények mellett.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i data-feather="hexagon" class="w-10 h-10 text-gold-500"></i>
             </div>
-        </section>
+            <h3 class="text-xl font-bold mb-3">Sokrétűség</h3>
+            <p>
+              Kozmetikánkban nem csak autókkal foglalkozunk. Igény esetén más
+              járműveket is kezelésbe veszünk, legyen az munkásautó,
+              mezőgazdasági gép, hajó, vagy akár légi jármű.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="bg-gold-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i data-feather="gift" class="w-10 h-10 text-gold-500"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Kedvezmények</h3>
+            <p>
+              Minden járműben elhelyezünk egy véletlenszerű kedvezményt
+              tartalmazó kártyát.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-20 container mx-auto px-4">
+        <h2 class="text-gold-500 text-4xl font-bold text-center mb-16">
+          SZOLGÁLTATÁSAINK
+        </h2>
+        <h2 class="text-xl mb-8 text-center">
+          Szolgáltatásainkat a minőség és tartósság irányába fejlesztjük, így
+          ennek elősegítése érdekében az eddigi legkisebb csomagunkat, az
+          <strong>Alap csomagot</strong> magánszemélyek számára megszüntettük,
+          mivel nem volt arányos az elvárásunk szerinti minőséggel. Célunk, hogy
+          minden autó a lehető legjobb formában kerüljön ki kezeink közül.
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60"
+          >
+            <div class="h-48 bg-gold-500/20 flex items-center justify-center">
+              <i data-feather="star" class="w-16 h-16 text-gold-500"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-gold-500 text-2xl font-bold mb-3">
+                Prémium csomag
+              </h3>
+              <p class="mb-4">
+                A csomag tartalmazza a teljes "Pro csomagot". Ezen felűl
+                tartalmaz még egy mély külső felület tisztitást, egy fényesitő
+                polírozást, mely a karcok nagyjából 60%-át eltünteti és szebb
+                fényt varázsol autójának, majd végűl egy ózonos fertőtlenítést.
+              </p>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-gold-500 font-bold text-xl">59.990Ft</span>
+                <span class="text-sm text-gray-400"
+                  >(Az ár állapot függvényében változhat.)</span
+                >
+              </div>
+              <div class="service-details hidden">
+                <ul class="list-disc pl-5 space-y-2 text-sm">
+                  <li>Teljes "Pro csomag" tartalma</li>
+                  <li>Vízkőoldás</li>
+                  <li>Gőzös tisztítás, sterilizálás</li>
+                  <li>Kárpittisztítás</li>
+                  <li>Motortér tisztítás</li>
+                  <li>Ózongenerátoros klímafertőtlenítés</li>
+                  <li>Kemény waxolás(6-8 hónap)</li>
+                </ul>
+                <p class="mt-4 text-sm text-gray-300">
+                  Időtartama: 1-2 nap állapottól fűggően változhat
+                </p>
+              </div>
+              <button
+                class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2"
+              >
+                <span>Csomag tartalma</span>
+                <i
+                  data-feather="chevron-down"
+                  class="w-5 h-5 transition-transform duration-300"
+                ></i>
+              </button>
+            </div>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60"
+          >
+            <div class="h-48 bg-gold-500/20 flex items-center justify-center">
+              <div class="service-ribbon top-right">Népszerű</div>
+              <i data-feather="pocket" class="w-16 h-16 text-gold-500"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-gold-500 text-2xl font-bold mb-3">Pro csomag</h3>
+              <p class="mb-4">
+                A csomag tartalmazza a teljes "Alap csomagot". Ezen felül
+                magában foglalja a vízkőoldást, a gőzös tisztítást és
+                sterilizálást, a kárpittisztítást, a motortér alapos
+                tisztítását, valamint egy 6 hónapos tartósságú kemény waxolást.
+              </p>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-gold-500 font-bold text-xl">29.990Ft</span>
+                <span class="text-sm text-gray-400"
+                  >(Az ár állapot függvényében változhat.)</span
+                >
+              </div>
+              <div class="service-details hidden">
+                <ul class="list-disc pl-5 space-y-2 text-sm">
+                  <li>Teljes "Alap csomag" tartalma</li>
+                  <li>Érintéses mosás</li>
+                  <li>Szállórozsda eltávolítás</li>
+                  <li>Részleges kárpittisztítás</li>
+                  <li>Bőrtisztítás, bőrápolás</li>
+                  <li>Műanyagápolás</li>
+                  <li>Wax bevonat(3 hónap)</li>
+                  <li>Véletlenszerű kedvezmény/nyeremény</li>
+                </ul>
+                <p class="mt-4 text-sm text-gray-300">
+                  Időtartam: 3-6 óra (állapottól függően változhat)
+                </p>
+              </div>
+              <button
+                class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2"
+              >
+                <span>Csomag tartalma</span>
+                <i
+                  data-feather="chevron-down"
+                  class="w-5 h-5 transition-transform duration-300"
+                ></i>
+              </button>
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60"
+          >
+            <div class="h-48 bg-gold-500/20 flex items-center justify-center">
+              <i data-feather="droplet" class="w-16 h-16 text-gold-500"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-gold-500 text-2xl font-bold mb-3">Alap csomag</h3>
+              <p class="mb-4">
+                A csomag tartalmaz egy teljes külső-belső tisztítást.Ezen felül
+                magában foglalja a bőrfelületek tisztítását és ápolását, a
+                szállórozsda eltávolítását, valamint egy 3 hónapos tartósságú
+                waxolást.
+              </p>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-gold-500 font-bold text-xl">11.990Ft</span>
+                <span class="text-sm text-gray-400"
+                  >(Az ár állapot függvényében változhat.)</span
+                >
+              </div>
+              <div class="service-details hidden">
+                <ul class="list-disc pl-5 space-y-2 text-sm">
+                  <li>Előmosás, samponos mosás</li>
+                  <li>Rovaroldás</li>
+                  <li>Felnitisztítás</li>
+                  <li>Gumiápolás</li>
+                  <li>Wax</li>
+                  <li>Ajtóflcok tisztítása</li>
+                  <li>Porszívózás(utastér, csomagtér)</li>
+                  <li>Műanyag elemek tisztítása</li>
+                  <li>Szellőzők tisztítása</li>
+                  <li>Ablakok tisztítása</li>
+                  <li>Illtosítás</li>
+                </ul>
+                <p class="mt-4 text-sm text-gray-300">
+                  Időtartam: 1-3 óra (állapottól függően változhat)
+                </p>
+              </div>
+              <button
+                class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2"
+              >
+                <span>Csomag tartalma</span>
+                <i
+                  data-feather="chevron-down"
+                  class="w-5 h-5 transition-transform duration-300"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60"
+          >
+            <div class="h-48 bg-gold-500/20 flex items-center justify-center">
+              <i data-feather="aperture" class="w-16 h-16 text-gold-500"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-gold-500 text-2xl font-bold mb-3">
+                Korrekciós polírozás
+              </h3>
+              <p class="mb-4">
+                A korrekciós polírozás során a fényezés felületéről eltávolítják
+                a kisebb karcokat, oxidációt és vízkövet, visszaadva az autó
+                eredeti fényét és simaságát.
+              </p>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-gold-500 font-bold text-xl"
+                  >Kérjen ajánlatot!</span
+                >
+                <span class="text-sm text-gray-400"
+                  ><small
+                    >(Méret és állapot függvényében változhat.)</small
+                  ></span
+                >
+              </div>
+              <div class="service-details hidden">
+                <ul class="list-disc pl-5 space-y-2 text-sm">
+                  <li>Visszaadja a fényezés eredeti fényét és mélységét.</li>
+                  <li>Eltávolítja a kisebb karcokat, oxidációt és vízkövet.</li>
+                  <li>Megakadályozza a felület további károsodását.</li>
+                  <li>Javítja a viasz vagy más védőréteg tapadását.</li>
+                  <li>Növeli az autó értékét és esztétikai vonzerejét.</li>
+                  <li>Az autó ápolt, újszerű megjelenést kap.</li>
+                </ul>
+                <p class="mt-4 text-sm text-gray-300">
+                  Időtartam: 2-3 nap (állapottól függően változhat)
+                </p>
+              </div>
+              <button
+                class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2"
+              >
+                <span>Előnyei</span>
+                <i
+                  data-feather="chevron-down"
+                  class="w-5 h-5 transition-transform duration-300"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60"
+          >
+            <div class="h-48 bg-gold-500/20 flex items-center justify-center">
+              <i
+                data-feather="battery-charging"
+                class="w-16 h-16 text-gold-500"
+              ></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-gold-500 text-2xl font-bold mb-3">
+                Fényszóró polírozás
+              </h3>
+              <p class="mb-4">
+                A fényszóró polírozás során átdolgozzuk a homályos vagy matt
+                felületet, visszaadva a kristálytiszta átláthatóságot.
+              </p>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-gold-500 font-bold text-xl">8.000Ft-tól</span>
+                <span class="text-sm text-gray-400"
+                  ><small
+                    >(Méret és állapot függvényében változhat.)</small
+                  ></span
+                >
+              </div>
+              <div class="service-details hidden">
+                <ul class="list-disc pl-5 space-y-2 text-sm">
+                  <li>Javítja a fényszóró fényerejét és világítását.</li>
+                  <li>
+                    Növeli az éjszakai és rossz látási viszonyok melletti
+                    biztonságot.
+                  </li>
+                  <li>Megakadályozza a további oxidációt és sárgulást.</li>
+                  <li>Hosszabbítja a fényszórók élettartamát</li>
+                  <li>
+                    Esztétikailag új, tiszta megjelenést biztosít az autónak.
+                  </li>
+                  <li>
+                    Csökkenti a fény szétszóródását, így egyenletesebb
+                    megvilágítást biztosít.
+                  </li>
+                </ul>
+                <p class="mt-4 text-sm text-gray-300">
+                  Időtartam: 2-3 óra (állapottól függően változhat)
+                </p>
+              </div>
+              <button
+                class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2"
+              >
+                <span>Előnyei</span>
+                <i
+                  data-feather="chevron-down"
+                  class="w-5 h-5 transition-transform duration-300"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="service-card bg-dark-800 rounded-lg overflow-hidden border border-gold-500/30 hover:border-gold-500/60"
+          >
+            <div class="h-48 bg-gold-500/20 flex items-center justify-center">
+              <i data-feather="shield" class="w-16 h-16 text-gold-500"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-gold-500 text-2xl font-bold mb-3">
+                Kerámia bevonat
+              </h3>
+              <p class="mb-4">
+                A kerámia bevonat során egy tartós, védő réteget viszünk fel a
+                fényezésre, amely ellenáll a szennyeződéseknek, víznek és kisebb
+                karcoknak. A kerámia bevonat előtt ajánlott korrekciós
+                polirózást elvégezni.
+              </p>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-gold-500 font-bold text-xl"
+                  >Kérjen ajánlatot!</span
+                >
+                <span class="text-sm text-gray-400"
+                  ><small
+                    >(Méret és állapot függvényében változhat.)</small
+                  ></span
+                >
+              </div>
+              <div class="service-details hidden">
+                <ul class="list-disc pl-5 space-y-2 text-sm">
+                  <li>
+                    Hosszú távon védi a fényezést a környezeti hatásoktól.
+                  </li>
+                  <li>
+                    Könnyebbé teszi az autó tisztítását, a szennyeződések
+                    kevésbé tapadnak.
+                  </li>
+                  <li>Fokozza a fényerőt és a mély, intenzív csillogást.</li>
+                  <li>
+                    Csökkenti a karcok és oxidáció kialakulásának esélyét.
+                  </li>
+                  <li>
+                    Hosszabbítja a viaszolás és más felületi védelmi kezelések
+                    hatékonyságát.
+                  </li>
+                  <li>
+                    Megvédi a fényezést a savas eső, madárürülék és egyéb káros
+                    anyagok okozta korróziótól.
+                  </li>
+                </ul>
+                <p class="mt-4 text-sm text-gray-300">
+                  Időtartam: 2-3 nap (állapottól függően változhat)
+                </p>
+              </div>
+              <button
+                class="toggle-btn w-full flex items-center justify-center gap-2 text-gold-500 hover:text-gold-400 transition py-2"
+              >
+                <span>Előnyei</span>
+                <i
+                  data-feather="chevron-down"
+                  class="w-5 h-5 transition-transform duration-300"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <h2 class="text-xl mb-8 text-center">
+          Szolgáltatásaink bármelyike kérhető
+          <strong>hozom-viszem</strong> szolgáltatással.
+        </h2>
+      </section>
+      <!-- Gallery Section -->
+      <section class="py-20 bg-dark-800">
+        <div class="container mx-auto px-4">
+          <h2 class="text-gold-500 text-4xl font-bold text-center mb-16">
+            Munkáink
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="overflow-hidden rounded-lg">
+              <img
+                src="http://static.photos/automotive/640x360/2"
+                alt="Detailing Work"
+                class="w-full h-64 object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="overflow-hidden rounded-lg">
+              <img
+                src="http://static.photos/automotive/640x360/3"
+                alt="Detailing Work"
+                class="w-full h-64 object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="overflow-hidden rounded-lg">
+              <img
+                src="http://static.photos/automotive/640x360/4"
+                alt="Detailing Work"
+                class="w-full h-64 object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="overflow-hidden rounded-lg">
+              <img
+                src="http://static.photos/automotive/640x360/5"
+                alt="Detailing Work"
+                class="w-full h-64 object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="overflow-hidden rounded-lg">
+              <img
+                src="http://static.photos/automotive/640x360/6"
+                alt="Detailing Work"
+                class="w-full h-64 object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="overflow-hidden rounded-lg">
+              <img
+                src="http://static.photos/automotive/640x360/7"
+                alt="Detailing Work"
+                class="w-full h-64 object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-20">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-gold-500 text-4xl font-bold mb-6">
+            Engedd, hogy az autód igazán ragyogjon!
+          </h2>
+          <p class="text-xl mb-8 max-w-2xl mx-auto">
+            Foglalj időpontot még ma!
+          </p>
+          <a
+            href="contact.html"
+            class="bg-gold-500 hover:bg-gold-600 text-dark-900 font-bold py-3 px-8 rounded-full transition duration-300 inline-block"
+            >Kapcsolat</a
+          >
+        </div>
+      </section>
+
     </main>
 
     <custom-footer></custom-footer>
@@ -335,6 +565,8 @@
     <script src="navbar.js"></script>
     <script src="footer.js"></script>
     <script src="script.js"></script>
-    <script>feather.replace();</script>
-</body>
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>

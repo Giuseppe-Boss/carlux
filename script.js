@@ -6,27 +6,43 @@ const discount = document.getElementById('discount');
 const finalPrice = document.getElementById('finalPrice');
 
 if (fleetSizeInput) {
-    fleetSizeInput.addEventListener('input', function() {
+    fleetSizeInput.addEventListener('input', function () {
         const size = parseInt(this.value);
         fleetSizeValue.textContent = size;
-        
-        // Calculate pricing
-        const basePrice = size * 11990;
-        let discountAmount = 0;
-        
-        if (size >= 10 && size < 25) {
-            discountAmount = basePrice * 0.1;
-        } else if (size >= 25 && size < 50) {
-            discountAmount = basePrice * 0.2;
-        } else if (size >= 50) {
-            discountAmount = basePrice * 0.3;
+
+        const originalUnitPrice = 12000; 
+        let unitPrice = originalUnitPrice;
+
+        // Pricing logic based on fleet size
+        if (size >= 3 && size <= 4) {
+            unitPrice = 11500;
+        } else if (size >= 5 && size <= 9) {
+            unitPrice = 11000;
+        } else if (size >= 10 && size <= 14) {
+            unitPrice = 10500;
+        } else if (size >= 15 && size <= 20) {
+            unitPrice = 9500;
+        } else if (size >= 21 && size <= 25) {
+            unitPrice = 9000;
+        } else if (size >= 26 && size <= 35) {
+            unitPrice = 8500;
+        } else if (size >= 36) {
+            unitPrice = 8000;
         }
-        
-        standardRate.textContent = `${basePrice.toLocaleString()}`;
-        discount.textContent = `-${discountAmount.toLocaleString()}`;
-        finalPrice.textContent = `${(basePrice - discountAmount).toLocaleString()}`;
+
+        const basePrice = unitPrice * size;
+        const originalPrice = originalUnitPrice * size;
+        const savings = originalPrice - basePrice;
+
+        // UI updates
+        standardRate.textContent = `${unitPrice.toLocaleString()} Ft / autó`;
+        fullOriginalPrice.textContent = `${originalPrice.toLocaleString()} Ft`;
+        discount.textContent = `-${savings.toLocaleString()} Ft`;
+        finalPrice.textContent = `${basePrice.toLocaleString()} Ft`;
     });
 }
+
+
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
