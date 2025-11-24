@@ -1,7 +1,9 @@
 class CustomFooter extends HTMLElement {
     connectedCallback() {
-      this.attachShadow({ mode: 'open' });
-      this.shadowRoot.innerHTML = `
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `
+        <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
         <style>
           footer {
             background-color: #121212;
@@ -43,14 +45,9 @@ class CustomFooter extends HTMLElement {
           .footer-links a:hover {
             color: #D4AF37;
           }
-          .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-          }
           .social-links a {
+            transition: 0.3s;
             color: white;
-            transition: color 0.3s;
           }
           .social-links a:hover {
             color: #D4AF37;
@@ -61,11 +58,11 @@ class CustomFooter extends HTMLElement {
             padding-top: 1.5rem;
             border-top: 1px solid #333;
           }
-            .footer-about{
+          .footer-about{
               justify-content: center;
               align-items: center;
               display: flex;
-            }
+          }
           #footerLogo{
             width: 90%;
           }
@@ -81,13 +78,14 @@ class CustomFooter extends HTMLElement {
             }
           }
         </style>
-<footer>
-  <div class="footer-content">
-    <div class="footer-about">
-      <img src="carlux_logo_uj_vagott.png" id="footerLogo" alt="">
-    </div>
 
-    <div class="footer-links">
+        <footer>
+          <div class="footer-content">
+            <div class="footer-about">
+              <img src="carlux_logo_uj_vagott.png" id="footerLogo" alt="">
+            </div>
+
+            <div class="footer-links">
       <h3>Szolgáltatások</h3>
       <ul>
         <li><a href="index.html#services">Külső-belső tisztítás/ápolás</a></li>
@@ -115,38 +113,43 @@ class CustomFooter extends HTMLElement {
       <h3>Kapcsolat</h3>
       <ul>
         <li><a href="tel:+36 30 197 6533"><i data-feather="phone"></i> (30) 197 6533</a></li>
+        <li><a href="https://maps.app.goo.gl/YjnY5yLTmi2RfWPK9" target="blank"><i data-feather="map-pin"></i> 4400 Nyíregyháza, Viktória u. 20.</a></li>
         <li><a href="mailto:info@carluxautokozmetika.hu"><i data-feather="mail"></i> info@carluxautokozmetika.hu</a></li>
-        <li><a href=""><i data-feather="map-pin"></i> 4400 Nyíregyháza, Viktória u. 20.</a></li>
       </ul>
+            </div>
 
-      <!-- Social ikonok a Contact oszlop alatt -->
-      <div class="mt-4 flex space-x-3">
-        <a href="https://www.facebook.com" target="_blank" class="bg-gold-500/20 p-3 rounded-full hover:bg-gold-500/30 transition">
-          <i data-feather="facebook" class="w-5 h-5"></i>
-        </a>
-        <a href="https://www.instagram.com" target="_blank" class="bg-gold-500/20 p-3 rounded-full hover:bg-gold-500/30 transition">
-          <i data-feather="instagram" class="w-5 h-5"></i>
-        </a>
-        <a href="https://www.tiktok.com" target="_blank" class="bg-gold-500/20 p-3 rounded-full hover:bg-gold-500/30 transition">
-          <i data-feather="video" class="w-5 h-5"></i> <!-- TikTok nincs Feather-ben, a video ikon illik hozzá -->
-        </a>
-      </div>
+            <!-- SOCIAL ICONS -->
+            <div class="footer-links">
+                <h3>FOLLOW US</h3>
+                <div class="social-links" style="display:flex; gap:1rem;">
 
-    </div>
+                    <a href="https://www.facebook.com/profile.php?id=61559633612667" target="blank">
+                        <i class="ri-facebook-fill" style="font-size:24px;"></i>
+                    </a>
 
-  </div>
+                    <a href="https://www.instagram.com/carlux_autokozmetika" target="blank">
+                        <i class="ri-instagram-fill" style="font-size:24px;"></i>
+                    </a>
 
-  <div class="copyright mt-6">
-    <p>&copy; ${new Date().getFullYear()} Carlux Car Detailing. All rights reserved.</p>
-  </div>
-</footer>
-      `;
-      
-      // Initialize feather icons after shadow DOM is attached
-      this.shadowRoot.querySelectorAll('[data-feather]').forEach(el => {
-        feather.replace();
-      });
+                    <a href="https://www.tiktok.com/@carlux_autokozmetika" target="blank">
+                        <i class="ri-tiktok-fill" style="font-size:24px;"></i>
+                    </a>
+
+
+                </div>
+            </div>
+
+          </div>
+
+          <div class="copyright">
+            <p>&copy; ${new Date().getFullYear()} Carlux Autókozmetika. Minden jog fenntartva.</p>
+          </div>
+        </footer>
+        `;
+
+        // Feather Icons init ONLY for contact section
+        feather.replace({ root: this.shadowRoot });
     }
-  }
-  customElements.define('custom-footer', CustomFooter);
+}
 
+customElements.define('custom-footer', CustomFooter);
