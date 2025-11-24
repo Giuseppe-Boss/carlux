@@ -120,7 +120,7 @@ class CustomFooter extends HTMLElement {
 
             <!-- SOCIAL ICONS -->
             <div class="footer-links">
-                <h3>FOLLOW US</h3>
+                <h3>KÖVESS MINKET</h3>
                 <div class="social-links" style="display:flex; gap:1rem;">
 
                     <a href="https://www.facebook.com/profile.php?id=61559633612667" target="blank">
