@@ -98,7 +98,7 @@ class CustomFooter extends HTMLElement {
     </div>
 
     <div class="footer-links">
-      <h3>Company</h3>
+      <h3>Oldalak</h3>
       <ul>
           <li><a href="index.html">Kezdőlap</a></li>
           <li><a href="about.html">Rólunk</a></li>
