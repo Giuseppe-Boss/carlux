@@ -174,3 +174,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .arrow.left { margin-right: 2px; }
 .arrow.right { margin-left: 2px; }
+
+.certificate-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}

@@ -14,20 +14,16 @@ if (fleetSizeInput) {
         let unitPrice = originalUnitPrice;
 
         // Pricing logic based on fleet size
-        if (size >= 3 && size <= 4) {
-            unitPrice = 11500;
-        } else if (size >= 5 && size <= 9) {
-            unitPrice = 11000;
-        } else if (size >= 10 && size <= 14) {
+        if (size >= 4 && size <= 11) {
             unitPrice = 10500;
-        } else if (size >= 15 && size <= 20) {
+        } else if (size >= 12 && size <= 19) {
+            unitPrice = 10000;
+        } else if (size >= 20 && size <= 25) {
             unitPrice = 9500;
-        } else if (size >= 21 && size <= 25) {
-            unitPrice = 9000;
         } else if (size >= 26 && size <= 35) {
-            unitPrice = 8500;
+            unitPrice = 9000;
         } else if (size >= 36) {
-            unitPrice = 8000;
+            unitPrice = 8800;
         }
 
         const basePrice = unitPrice * size;

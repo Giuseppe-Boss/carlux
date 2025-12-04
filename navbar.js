@@ -102,7 +102,7 @@ class CustomNavbar extends HTMLElement {
           content: "✕";
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 875px) {
           ul {
                 flex-direction: column;
                 gap: 1rem;

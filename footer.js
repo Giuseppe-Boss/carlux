@@ -1,7 +1,7 @@
 class CustomFooter extends HTMLElement {
-    connectedCallback() {
-        this.attachShadow({ mode: 'open' });
-        this.shadowRoot.innerHTML = `
+  connectedCallback() {
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.innerHTML = `
         <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
         <style>
@@ -70,11 +70,18 @@ class CustomFooter extends HTMLElement {
             .footer-content {
               grid-template-columns: 1fr;
             }
-            #footerLogo{
+
+            #footerLogo {
               width: 60%;
             }
-            .footer-links  {
-                text-align:center;
+
+            .footer-links {
+              text-align:center;
+            }
+
+            /* --- SOCIAL ICONOK KÖZÉPRE --- */
+            .social-links {
+              justify-content: center !important;
             }
           }
         </style>
@@ -147,9 +154,9 @@ class CustomFooter extends HTMLElement {
         </footer>
         `;
 
-        // Feather Icons init ONLY for contact section
-        feather.replace({ root: this.shadowRoot });
-    }
+    // Feather Icons init ONLY for contact section
+    feather.replace({ root: this.shadowRoot });
+  }
 }
 
-customElements.define('custom-footer', CustomFooter);
+customElements.define("custom-footer", CustomFooter);
